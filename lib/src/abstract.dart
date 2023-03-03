@@ -184,6 +184,9 @@ abstract class ICalendarElement extends AbstractSerializer {
     if (description != null) {
       out.writecrlf('DESCRIPTION:${_foldLines(escapeValue(description!))}');
     }
+    if (organizer != null) {
+      out.writecrlf(organizer!.serializeOrganizer());
+    }
     if (rrule != null) out.write(rrule!.serialize());
 
     return out.toString();
