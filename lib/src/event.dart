@@ -15,7 +15,6 @@ class IEvent extends ICalendarElement with EventToDo {
   double? lat, lng;
   List<String>? resources;
   IAlarm? alarm;
-  IOrganizer? organizer;
   int? priority;
 
   IEvent({
